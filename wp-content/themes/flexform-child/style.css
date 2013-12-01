@@ -29,19 +29,19 @@
 
 .page h1,
 .single h1 {
-    font-family: 'Overlock', cursive;
-    font-family: 'Bitter', serif;
-    font-family: 'Fredoka One', cursive;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-family: 'Sansita One', cursive;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Oxygen', sans-serif;
-    font-family: 'Radley', serif;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-family: 'Inika', serif;
+/*    font-family: 'Overlock', cursive;*/
+/*    font-family: 'Bitter', serif;*/
+/*    font-family: 'Fredoka One', cursive;*/
+/*    font-family: 'Merriweather Sans', sans-serif;*/
+/*    font-family: 'Sansita One', cursive;*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    font-family: 'Oxygen', sans-serif;*/
+/*    font-family: 'Radley', serif;*/
+/*    font-family: 'Source Sans Pro', sans-serif;*/
+/*    font-family: 'Inika', serif;*/
 /*    font-style: italic;*/
+/*    font-family: 'Raleway', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
 /*    font-weight: bold;*/
     text-shadow: 2px 2px rgba(0,0,0,0.25);

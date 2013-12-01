@@ -48,7 +48,7 @@
 	
 	/* Include plugins */
 	include(SF_INCLUDES_PATH . '/plugin-includes.php');	
-	include(SF_INCLUDES_PATH . '/plugins/love-it-pro/love-it-pro.php');
+    // include(SF_INCLUDES_PATH . '/plugins/love-it-pro/love-it-pro.php');
 	
 	/* Include widgets */
 	include(SF_WIDGETS_PATH . '/widget-flickr.php');

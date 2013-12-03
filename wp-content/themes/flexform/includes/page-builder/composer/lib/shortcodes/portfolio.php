@@ -39,7 +39,7 @@ class WPBakeryShortCode_portfolio extends WPBakeryShortCode {
 	        
 	        if ($portfolio_filter == "yes" && $sidebars == "no-sidebars") {
 		        $filter_output .= '<div class="filter-wrap row clearfix">'. "\n";
-		        $filter_output .= '<a href="#" class="select"><i class="icon-align-justify"></i>'. __("Filter our work", "swiftframework") .'</a>'. "\n";
+		        $filter_output .= '<a href="#" class="select"><i class="icon-align-justify"></i>'. __("Filter by category", "swiftframework") .'</a>'. "\n";
 		        $filter_output .= '<div class="filter-slide-wrap span12 alt-bg '.$filter_wrap_bg.'">'. "\n";
 		        $filter_output .= '<ul class="portfolio-filter filtering row clearfix">'. "\n";
 		        $filter_output .= '<li class="all selected span2"><a data-filter="*" href="#"><span class="item-name">'. __("All", "swiftframework").'</span><span class="item-count">0</span></a></li>'. "\n";
@@ -88,6 +88,12 @@ class WPBakeryShortCode_portfolio extends WPBakeryShortCode {
     		$items .= '<ul class="portfolio-items '.$display_type.'-portfolio filterable-items row clearfix">'. "\n";
 			}
 			
+            
+            // CUSTOM
+            // PORTFOLIO Page ID
+            // -------------------
+            $pageID = get_the_ID();
+            
 			// PORTFOLIO LOOP
 			
 			while ( $portfolio_items->have_posts() ) : $portfolio_items->the_post();								
@@ -253,8 +259,20 @@ class WPBakeryShortCode_portfolio extends WPBakeryShortCode {
 						$items .= '</ul><div class="open-item"><a '.$link_config.'><i class="icon-plus"></i></a></div></div>'. "\n";
 						
 					} else {
-					
-						$image = aq_resize( $thumb_img_url, $thumb_width, $thumb_height, true, false);
+					    
+                        // CUSTOM
+                        // Full Thumbnail for Bookshelf
+                        // -------------------
+                        if( is_page('bookshelf') ) {
+                            $image = array(
+                                0 => $thumb_img_url,
+                                1 => $thumb_width,
+                                2 => $thumb_height
+                            );
+                        } else {
+                            $image = aq_resize( $thumb_img_url, $thumb_width, $thumb_height, true, false);
+                        }
+                        
 						
 						if($image) {
 							$items .= '<a '.$link_config.'>'. "\n";

@@ -21,12 +21,6 @@
 
 /* General Layout
 ---------------------*/
-@media only screen and (min-width: 1200px) {
-    #nav-section {
-        margin-top: 15px !important;
-    }
-}
-
 .page h1,
 .single h1 {
 /*    font-family: 'Overlock', cursive;*/
@@ -47,61 +41,53 @@
     text-shadow: 2px 2px rgba(0,0,0,0.25);
 }
 
-/* Bookshelf
----------------------*/
-/*
-.bookshelf ul {
-    list-style: none;
+
+/* Portfolio Overlay Text
+------------------------------*/
+.overlay .thumb-info h4 {
+    font-size: 2.5em;
+    line-height: 1.2;
 }
 
-.bookshelf ul li {
-    margin: 0 10px 20px 10px;
-    float: left;
-}*/
-
-
-.bookshelf .wpb_featured_clients_widget h4 {
-    line-height: 1.6;
-    font-family: 'Radley', serif;
-    font-style: italic;
-    margin-bottom: 30px;
-/*    display: none;*/
+/* Screen size 1200px MIN
+-----------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    #nav-section {
+        margin-top: 15px !important;
+    }
 }
 
-.bookshelf .featured-clients-items-wrap {
-    width: 100%;
-}
-
-.bookshelf .wpb_featured_clients_widget li {
-    margin-bottom: 20px;
-}
-
+/* Screen size 767px MAX
+-----------------------------------------------*/
 @media (max-width: 767px) {
-    .bookshelf .wpb_featured_clients_widget h4 {
-        font-size: 32px;
-    }
-    .bookshelf .featured-clients-items figure img {
-        max-height: 300px;
-    }
+    
 }
 
+
+/* Screen size 768px to 979px
+-----------------------------------------------*/
 @media (min-width: 768px) and (max-width: 979px) {
-    .bookshelf .featured-clients-items figure {
-        height: 150px;
-    }
-    .bookshelf .featured-clients-items figure img {
-        max-height: 150px;
-    }
+    
 }
 
-@media (min-width: 980px) {
-    .bookshelf .wpb_featured_clients_widget h4 {
-        font-size: 22px;
+/* Screen size 980px MIN
+-----------------------------------------------*/
+@media (min-width: 600px) {
+    
+    /* Bookshelf Single post
+    --------------------------*/
+    .bookshelf.single figure.media-wrap {
+        width: 45%;
+        margin-right: 5%;
+        margin-bottom: 60px;
+        float: left;
     }
-    .bookshelf .featured-clients-items figure {
-        height: 200px;
+    .bookshelf.single article {
+        width: 50%;
+        float: left;
     }
-    .bookshelf .featured-clients-items figure img {
-        max-height: 200px;
+    
+    .bookshelf.single .page-content {
+        width: 100%;
     }
 }

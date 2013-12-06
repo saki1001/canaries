@@ -223,7 +223,7 @@
 									<?php } ?>
 									<?php if ($show_sub) { ?>
 									<li class="parent aux-subscribe">
-										<a href="#"><?php _e("Subscribe", "swiftframework"); ?></a>
+										<a href="#"><?php _e("Subscribe to our Newsletter", "swiftframework"); ?></a>
 										<ul class="sub-menu">
 											<li>
 												<div id="header-subscribe" class="clearfix">

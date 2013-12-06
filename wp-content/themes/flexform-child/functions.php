@@ -13,6 +13,18 @@
         }
     }
     
+    /**
+     * Register and enqueue a scripts and styles.
+     */
+    function child_add_scripts() {
+        wp_register_script( 'mailchimp-signup', get_stylesheet_directory_uri() . '/js/mailchimp.js', array('jquery'), NULL, true );
+        wp_register_script( 'email-form-validate', get_stylesheet_directory_uri() . '/js/jquery.form-n-validate.js', array('jquery'), NULL, true );
+        
+        wp_enqueue_script( 'mailchimp-signup' );
+        wp_enqueue_script( 'email-form-validate' );
+    }
+    add_action( 'wp_enqueue_scripts', 'child_add_scripts' );
+    
     // CATEGORY IN BODY TAG
     // add category nicenames in body and post class
     function category_id_class($classes) {

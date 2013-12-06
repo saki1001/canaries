@@ -1,0 +1,69 @@
+/* General Layout
+---------------------*/
+.page h1,
+.single h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+/*    font-weight: bold;*/
+    text-shadow: 2px 2px rgba(0,0,0,0.25);
+}
+
+/* Top menu Subscribe link */
+#top-bar .menu > li.aux-subscribe > a {
+    color: #666666;
+    font-weight: bold;
+}
+
+#top-bar #header-subscribe {
+    min-width: 300px;
+}
+
+/* Portfolio Overlay Text
+------------------------------*/
+.overlay .thumb-info h4 {
+    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+/* Screen size 1200px MIN
+-----------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    #nav-section {
+        margin-top: 15px !important;
+    }
+}
+
+/* Screen size 767px MAX
+-----------------------------------------------*/
+@media (max-width: 767px) {
+    
+}
+
+
+/* Screen size 768px to 979px
+-----------------------------------------------*/
+@media (min-width: 768px) and (max-width: 979px) {
+    
+}
+
+/* Screen size 980px MIN
+-----------------------------------------------*/
+@media (min-width: 600px) {
+    
+    /* Bookshelf Single post
+    --------------------------*/
+    .bookshelf.single figure.media-wrap {
+        width: 45%;
+        margin-right: 5%;
+        margin-bottom: 60px;
+        float: left;
+    }
+    .bookshelf.single article {
+        width: 50%;
+        float: left;
+    }
+    
+    .bookshelf.single .page-content {
+        width: 100%;
+    }
+}

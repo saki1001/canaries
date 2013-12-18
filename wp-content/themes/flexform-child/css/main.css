@@ -1,11 +1,9 @@
 /* General Layout
 ---------------------*/
-.page h1,
-.single h1 {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-/*    font-weight: bold;*/
-    text-shadow: 2px 2px rgba(0,0,0,0.25);
+
+/* Crop featured image on single page */
+.single figure.media-wrap {
+    max-height: 200px;
 }
 
 /* Top menu Subscribe link */
@@ -36,7 +34,18 @@
 /* Screen size 767px MAX
 -----------------------------------------------*/
 @media (max-width: 767px) {
+    /* Show subscribe menu */
+    #top-bar .menu > li.parent::after, nav .menu .sub-menu .parent > a::after {
+        display: block;
+    }
     
+    .parent.aux-subscribe a {
+        display: none;
+    }
+    
+    nav .menu ul, nav#top-bar-menu .menu > li > ul {
+        border-top: none;
+    }
 }
 
 

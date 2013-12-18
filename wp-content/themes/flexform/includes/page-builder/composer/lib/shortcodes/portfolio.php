@@ -194,7 +194,9 @@ class WPBakeryShortCode_portfolio extends WPBakeryShortCode {
 					} else if ($sidebars == "one-sidebar") {
 					$item_class = "span2 ";
 					} else {
-					$item_class = "span3 ";
+                    // $item_class = "span3 ";
+                    // CUSTOM
+                    $item_class = "span2 ";
 					}
 				}
 				

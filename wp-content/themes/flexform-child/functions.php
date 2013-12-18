@@ -23,33 +23,34 @@
         wp_enqueue_script( 'mailchimp-signup' );
         wp_enqueue_script( 'email-form-validate' );
     }
-    add_action( 'wp_enqueue_scripts', 'child_add_scripts' );
+    // Temporarily disabling
+    // add_action( 'wp_enqueue_scripts', 'child_add_scripts' );
     
     // CATEGORY IN BODY TAG
     // add category nicenames in body and post class
-    function category_id_class($classes) {
-        global $post;
+    // function category_id_class($classes) {
+    //     global $post;
         
-        if( is_single() ) {
-            $catArray = get_the_terms( $post->ID, 'portfolio-category' );
-            $category = reset($catArray);
-            $categorySlug = $category->slug;
-            $parentCat = get_term($category->parent, 'portfolio-category');
-            $parentCatSlug = $parentCat->slug;
-            
-            if( isset($parentCatSlug) ) {
-                $classes[] = $parentCatSlug;
-                
-            } elseif( isset($categorySlug) ) {
-                $classes[] = $categorySlug;
-                
-            } else {
-                // do nothing
-            }
-            
-            return $classes;
-        }
-    }
-    add_filter('body_class', 'category_id_class');
+        // if( is_single() ) {
+        //     $catArray = get_the_terms( $post->ID, 'portfolio-category' );
+        //     $category = reset($catArray);
+        //     $categorySlug = $category->slug;
+        //     $parentCat = get_term($category->parent, 'portfolio-category');
+        //     $parentCatSlug = $parentCat->slug;
+        //     
+        //     if( isset($parentCatSlug) ) {
+        //         $classes[] = $parentCatSlug;
+        //         
+        //     } elseif( isset($categorySlug) ) {
+        //         $classes[] = $categorySlug;
+        //         
+        //     } else {
+        //         // do nothing
+        //     }
+        //     
+        //     return $classes;
+        // }
+    // }
+    // add_filter('body_class', 'category_id_class');
     
 ?>

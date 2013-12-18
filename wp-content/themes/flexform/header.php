@@ -200,7 +200,7 @@
 			<?php } ?>
 				<div class="container">
 					<div class="row">
-						<a href="#" class="visible-phone show-menu"><?php _e("Select a page", "swiftframework"); ?><i class="icon-angle-down"></i></a>
+						<a href="#" class="visible-phone show-menu"><?php _e("Subscribe to our newsletter", "swiftframework"); ?><i class="icon-angle-down"></i></a>
 						<nav id="top-bar-menu" class="top-menu span8 clearfix">						
 							<div id="aux-nav">
 								<ul class="menu">

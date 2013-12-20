@@ -2,7 +2,7 @@
 ---------------------*/
 
 /* Crop featured image on single page */
-.single figure.media-wrap {
+.blog.single figure.media-wrap {
     max-height: 200px;
 }
 
@@ -59,20 +59,20 @@
 -----------------------------------------------*/
 @media (min-width: 600px) {
     
-    /* Bookshelf Single post
+    /* Portfolio Single post
     --------------------------*/
-    .bookshelf.single figure.media-wrap {
+    .portfolio.single figure.media-wrap {
         width: 45%;
         margin-right: 5%;
         margin-bottom: 60px;
         float: left;
     }
-    .bookshelf.single article {
+    .portfolio.single article {
         width: 50%;
         float: left;
     }
     
-    .bookshelf.single .page-content {
+    .portfolio.single .page-content {
         width: 100%;
     }
 }

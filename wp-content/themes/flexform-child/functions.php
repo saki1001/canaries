@@ -28,29 +28,53 @@
     
     // CATEGORY IN BODY TAG
     // add category nicenames in body and post class
-    // function category_id_class($classes) {
-    //     global $post;
+    function category_id_class($classes) {
+        global $post;
         
-        // if( is_single() ) {
-        //     $catArray = get_the_terms( $post->ID, 'portfolio-category' );
-        //     $category = reset($catArray);
-        //     $categorySlug = $category->slug;
-        //     $parentCat = get_term($category->parent, 'portfolio-category');
-        //     $parentCatSlug = $parentCat->slug;
-        //     
-        //     if( isset($parentCatSlug) ) {
-        //         $classes[] = $parentCatSlug;
-        //         
-        //     } elseif( isset($categorySlug) ) {
-        //         $classes[] = $categorySlug;
-        //         
-        //     } else {
-        //         // do nothing
-        //     }
-        //     
-        //     return $classes;
-        // }
-    // }
-    // add_filter('body_class', 'category_id_class');
+        if( is_single() ) {
+            
+            $catArray = get_the_terms( $post->ID, 'category' );
+            $portCatArray = get_the_terms( $post->ID, 'portfolio-category' );
+            
+            if( $catArray != '' ) {
+                
+                $classes[] = 'blog';
+                
+                $category = reset($catArray);
+                $categorySlug = $category->slug;
+                $parentCategory = get_term($category->parent, 'category');
+                $parentCategorySlug = $parentCategory->slug;
+                
+                if( isset($parentCategorySlug) ) {
+                    $classes[] = $parentCategorySlug;
+                
+                } elseif( isset($categorySlug) ) {
+                    $classes[] = $categorySlug;
+                
+                }
+                
+            } elseif ( $portCatArray != '' ) {
+                
+                $classes[] = 'portfolio';
+                
+                $portCat = reset($portCatArray);
+                $portCatSlug = $portCat->slug;
+                $parentPortCat = get_term($portCat->parent, 'portfolio-category');
+                $parentPortCatSlug = $parentPortCat->slug;
+                
+                if( isset($parentPortCatSlug) ) {
+                    $classes[] = $parentPortCatSlug;
+                
+                } elseif( isset($portCatSlug) ) {
+                    $classes[] = $portCatSlug;
+                
+                }
+            }
+            
+            return $classes;
+        }
+        
+    }
+    add_filter('body_class', 'category_id_class');
     
 ?>

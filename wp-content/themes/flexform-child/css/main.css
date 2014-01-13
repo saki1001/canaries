@@ -19,12 +19,18 @@
     padding: 0;
 }
 
+/*Social links*/
 #top-bar-social > ul {
     margin-top: 10px;
 }
 
+/*Drop down*/
 #top-bar #header-subscribe {
-    min-width: 300px;
+    min-width: 250px;
+}
+
+nav#top-bar-menu .menu > li > ul {
+    top: 42px;
 }
 
 body.home .alt-bg {
@@ -41,6 +47,7 @@ body.home h1 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 60px;
     font-weight: bold;
+    line-height: 1.2;
     text-transform: uppercase;
     color: #CCC;
     -webkit-transition: color 1s;
@@ -69,10 +76,18 @@ body.home h1:hover {
 
 /* Screen size 767px MAX
 -----------------------------------------------*/
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     /* Show subscribe menu */
     #top-bar .menu > li.parent::after, nav .menu .sub-menu .parent > a::after {
         display: block;
+    }
+    
+    #top-bar .show-menu {
+        width: 100%;
+    }
+    
+    #top-bar .top-menu .menu {
+        width: 100% !important;
     }
     
     .parent.aux-subscribe a {
@@ -82,9 +97,7 @@ body.home h1:hover {
     nav .menu ul, nav#top-bar-menu .menu > li > ul {
         border-top: none;
     }
-}
-
-@media only screen and (max-width: 767px) {
+    
     .page-heading.alt-bg {
         width: 110%!important;
         margin-left: -5%!important;

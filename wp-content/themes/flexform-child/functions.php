@@ -31,6 +31,10 @@
     function category_id_class($classes) {
         global $post;
         
+        if( is_page('home') || is_home() ) {
+            $classes[] = 'home';
+        }
+        
         if( is_single() ) {
             
             $catArray = get_the_terms( $post->ID, 'category' );
@@ -75,6 +79,6 @@
         }
         
     }
-    add_filter('body_class', 'category_id_class');
+    add_filter('get_body_class', 'category_id_class');
     
 ?>

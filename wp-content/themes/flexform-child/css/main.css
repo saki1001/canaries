@@ -10,10 +10,17 @@
 }
 
 /* Top menu Subscribe link */
-#top-bar .menu > li.aux-subscribe > a {
+#top-bar .menu > li.aux-subscribe > h3 {
     color: #666666;
     font-weight: bold;
     font-size: 1.3em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#top-bar-social > ul {
+    margin-top: 10px;
 }
 
 #top-bar #header-subscribe {

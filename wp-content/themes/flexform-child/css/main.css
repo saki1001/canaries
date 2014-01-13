@@ -1,3 +1,6 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+
 /* General Layout
 ---------------------*/
 
@@ -10,10 +13,36 @@
 #top-bar .menu > li.aux-subscribe > a {
     color: #666666;
     font-weight: bold;
+    font-size: 1.3em;
 }
 
 #top-bar #header-subscribe {
     min-width: 300px;
+}
+
+body.home .alt-bg {
+    border: none;
+}
+body.home .page-heading {
+    background-color: #FFF;
+    border-bottom-color: none;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+body.home h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #CCC;
+    -webkit-transition: color 1s;
+       -moz-transition: color 1s;
+            transition: color 1s;
+}
+
+body.home h1:hover {
+    color: #AAA;
 }
 
 /* Portfolio Overlay Text
@@ -45,6 +74,13 @@
     
     nav .menu ul, nav#top-bar-menu .menu > li > ul {
         border-top: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .page-heading.alt-bg {
+        width: 110%!important;
+        margin-left: -5%!important;
     }
 }
 

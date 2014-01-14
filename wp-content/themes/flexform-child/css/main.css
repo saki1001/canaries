@@ -5,9 +5,9 @@
 ---------------------*/
 
 /* Crop featured image on single page */
-.blog.single figure.media-wrap {
+/*.blog.single figure.media-wrap {
     max-height: 200px;
-}
+}*/
 
 /* Top menu Subscribe link */
 #top-bar .menu > li.aux-subscribe > h3 {
@@ -57,6 +57,10 @@ body.home h1 {
 
 body.home h1:hover {
     color: #AAA;
+}
+
+body.single-portfolio .portfolio-details-wrap .date {
+    display: none;
 }
 
 /* Portfolio Overlay Text
@@ -117,18 +121,18 @@ body.home h1:hover {
     
     /* Portfolio Single post
     --------------------------*/
-    .portfolio.single figure.media-wrap {
+    body.single-portfolio figure.media-wrap {
         width: 45%;
         margin-right: 5%;
         margin-bottom: 60px;
         float: left;
     }
-    .portfolio.single article {
+    body.single-portfolio article {
         width: 50%;
         float: left;
     }
     
-    .portfolio.single .page-content {
+    body.single-portfolio .page-content {
         width: 100%;
     }
 }

@@ -15,3 +15,6 @@ sitemap.xml.gz
 
 # Mac OS
 .DS_Store
+
+# Copyrighted Files
+wp-content/themes/flexform/includes/page-builder/
